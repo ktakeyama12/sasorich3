@@ -15,7 +15,8 @@
             ?><br><?php
         }
         ?>
+        {!! link_to_route('food.index', 'FEED') !!}
         </div>
-        {!! link_to_route('food.index') !!}
+        
 @endsection
 
