@@ -16,5 +16,6 @@
         }
         ?>
         </div>
+        {!! link_to_route('food.index') !!}
 @endsection
 

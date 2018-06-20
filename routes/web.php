@@ -39,3 +39,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 //Route::get('events/{id}', 'MemberController@unsanka')->name('member.unsanka');
 Route::post('events/{id}', 'MemberController@sanka')->name('member.sanka');
 
+
+Route::get('food', 'FoodController@index')->name('food.index');
+Route::post('food.store', 'FoodController@store')->name('food.store');

@@ -32,4 +32,9 @@ class User extends Authenticatable
     {
        return $this->belongsToMany(Event::class, 'event_user', 'id', 'event_id')->withTimestamps();
     }
+    
+    public function foods()
+    {
+        return $this->hasMany(Food::class);
+    }
 }
