@@ -12,13 +12,16 @@
             <li>
                 <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/events.profile') }}"><span class="glyphicon glyphicon-user"></h1>&nbsp;</span></a>
             </li>
+             <li>
+                <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></h1>&nbsp;</span></a>
+            </li>
         </ul>
     </div>
     @else
      <div class="column" style="text-align:center;">
         <ul class="list-inline">
-            {!! link_to_route('signup.get', 'Signup', null, ['class' => 'btn btn-info']) !!}</li>
-            &nbsp;&nbsp;&nbsp;{!! link_to_route('login', 'Login', null, ['class' => 'btn btn-warning']) !!}</li>
+            {!! link_to_route('signup.get', 'Signup', null, ['class' => 'btn btn-info']) !!}
+            &nbsp;&nbsp;&nbsp;{!! link_to_route('login', 'Login', null, ['class' => 'btn btn-warning']) !!}
         </ul>
      </div>
     @endif

@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <div class="col-xs-offset-3 col-xs-6"><div class="alert alert-info" role="alert"> <h1>CREATE A NEW LUNCH INVITATION</h1></div></div>
+    <div class="col-xs-offset-3 col-xs-6"><div class="alert alert-info" role="alert" align="center"> <h1>CREATE A NEW LUNCH INVITATION</h1></div></div>
        
        
             <div class="lead">

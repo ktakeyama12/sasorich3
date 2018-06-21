@@ -42,3 +42,4 @@ Route::post('events/{id}', 'MemberController@sanka')->name('member.sanka');
 
 Route::get('food', 'FoodController@index')->name('food.index');
 Route::post('food.store', 'FoodController@store')->name('food.store');
+Route::get('food.match', 'FoodController@match')->name('food.match');

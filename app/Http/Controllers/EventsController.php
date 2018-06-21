@@ -76,7 +76,7 @@ class EventsController extends Controller
         $event->theme = $request->theme;
         $event->details = $request->details;
         $event->maxpeople = $request->maxpeople;
-        $event->host = \Auth::user()->host;
+        $event->host = \Auth::user()->name;
         
         $event->save();
         

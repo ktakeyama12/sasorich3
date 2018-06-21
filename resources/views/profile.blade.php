@@ -15,7 +15,8 @@
             ?><br><?php
         }
         ?>
-        {!! link_to_route('food.index', 'FEED') !!}
+        {!! link_to_route('food.index', 'What to FEED?', NULL, ['class' => 'btn btn-lg btn-primary']) !!}
+        {!! link_to_route('food.match', 'SHOW MATCHES', NULL, ['class' => 'btn btn-lg btn-primary']) !!}
         </div>
         
 @endsection

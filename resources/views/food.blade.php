@@ -6,8 +6,8 @@
 
     {!! Form::model($foods, ['route' => 'food.store']) !!}
 
-        {!! Form::label('foods', 'メッセージ:') !!}
-        {!! Form::text('foods') !!}
+        {!! Form::label('foodseaten', 'メッセージ:') !!}
+        {!! Form::text('foodseaten') !!}
 
         {!! Form::submit('投稿') !!}
 
@@ -16,6 +16,7 @@
     <?php
     foreach($foodeat as $foodeat){
         print $foodeat;
+        ?><br><?php
     }
     ?>
 

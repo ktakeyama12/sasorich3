@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="col-xs-offset-4 col-xs-4">
-    <div class="alert alert-info" role="alert"><h1>{{ $events->title }} の詳細ページ</h1></div>
+<div class="col-xs-offset-2 col-xs-8">
+    <div class="alert alert-info" role="alert" align="center"><h1>{{ $events->title }} の詳細ページ</h1></div>
         
          
            

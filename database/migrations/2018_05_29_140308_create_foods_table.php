@@ -12,7 +12,7 @@ class CreateFoodsTable extends Migration
         Schema::create('foods', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_id');
-            $table->string('foods');
+            $table->string('foodseaten');
             $table->timestamps();
         });
     }
