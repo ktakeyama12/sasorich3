@@ -15,8 +15,17 @@
   <div class='title'>Sasorich
        <div class="column" style="text-align:center;">
         <ul class="list-inline">
-            {!! link_to_route('signup.get', 'Signup', null, ['class' => 'btn btn-info']) !!}
-            &nbsp;&nbsp;&nbsp;{!! link_to_route('login', 'Login', null, ['class' => 'btn btn-warning']) !!}
+            
+            
+             <section class="p3">
+                  <a href="{{ route('signup.get') }}" data-cont="Sign up">Sign up</a>
+             </section>
+             
+            
+             <section class="p4">
+                  <a href="{{ route('login') }}" data-cont="Login">Login</a>
+             </section>
+            
         </ul>
      </div>
   </div>

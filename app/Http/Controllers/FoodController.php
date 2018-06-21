@@ -58,29 +58,31 @@ class FoodController extends Controller
     
     public function match(){
         $user_id = \Auth::user()->id;
-        $foodeat=[];
-        $id=[];
-        $matchuser=[];
-        $namesmatch+[];
-        $results=DB::select("select foodseaten from foods where user_id = $user_id");
-        for ($i=0; $i<count($results);$i++) {
-            array_push($foodeat, $results[$i]->foodseaten);
-        }
-        foreach($foodeat as $foodeat){
-                 $matchuser=DB::select("select `user_id` from `foods` where `foodseaten` = '$foodeat'");
-        }
-         
-        for ($i=0; $i<count($matchuser);$i++) {
-            array_push($id, $matchuser[$i]->user_id);
-        }
+        $foodeat = \App\Food::where('user_id', $user_id)->pluck('foodseaten');
+        $arrayeat=[];
+        $arraynames=[];
         
-        foreach($id as $id){
-                 $namesmatch=DB::select("select `names` from `users` where `user_id` = '$id'");
+        foreach ($foodeat as $foodeat) {
+             $matchid=\App\Food::where('foodseaten', $foodeat)->pluck('user_id');
+             foreach($matchid as $matchid){
+                 $name=\App\User::where('id', $matchid)->pluck('name');
+                 foreach($name as $name){
+                     if($user_id!=$matchid){
+                         array_push($arrayeat,$foodeat);
+                         array_push($arraynames, $name);
+                        ?><br><?php
+                     }
+                 }
+             }
         }
-        var_dump($namesmatch);exit;
+        $test=array_combine($arraynames,$arrayeat);
+        //var_dump($test);exit;
         
-        
-        return view('match'); 
+        return view('match', [
+            'arrayeat' => $arrayeat,
+            'arraynames' => $arraynames,
+            
+        ]);
     }
 
 }

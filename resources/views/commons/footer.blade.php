@@ -4,7 +4,7 @@
     <div class="column" style="text-align:center;">
         <ul class="list-inline">
             <li>
-                <h1><a href="{{ url('/events') }}"><span class="glyphicon glyphicon-home"></h1> &nbsp;</span></a>
+                <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/events') }}"><span class="glyphicon glyphicon-home"></h1>&nbsp;</span></a>
             </li>
             <li>
                  <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/events/create') }}"><span class="glyphicon glyphicon-edit"></h1>&nbsp;</span></a>
@@ -13,7 +13,7 @@
                 <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/events.profile') }}"><span class="glyphicon glyphicon-user"></h1>&nbsp;</span></a>
             </li>
              <li>
-                <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></h1>&nbsp;</span></a>
+                <h1>&nbsp;&nbsp;<a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></h1>&nbsp;</span></a>
             </li>
         </ul>
     </div>
