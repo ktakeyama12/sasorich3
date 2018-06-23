@@ -12,8 +12,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
-         <link href="css/app.css" rel="stylesheet" type="text/css">
+        <!--<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">-->
+         <link href="css/sasorich.css" rel="stylesheet" type="text/css">
                 <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -25,11 +25,21 @@
       
             
         <div class="container">
+                <div class='box'>
+        <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+            <div class='title'>Sasorich
+            <div class="column" style="text-align:center;">
+                <ul class="list-inline">
+            </div>
             
+        </div>
             @include('commons.error_messages')
             @yield('content')
+           
         </div>
 
-        @include('commons.footer')
+        
     </body>
 </html>

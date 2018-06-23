@@ -1,4 +1,7 @@
+<br><br>
 <footer>
+    <div id="footer">
+        
     @if (Auth::check())
     <div class="column" style="text-align:center;">
         <ul class="list-inline">
@@ -15,6 +18,7 @@
                 <h1>&nbsp;&nbsp;&nbsp;<a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></h1>&nbsp;</span></a>
             </li>
         </ul>
+    </div>
     </div>
     @else
      <div class="column" style="text-align:center;">

@@ -1,5 +1,5 @@
 <footer>
-    <link href="css/app.css" rel="stylesheet" type="text/css">
+<!--<link href="css/app.css" rel="stylesheet" type="text/css">-->
     @if (Auth::check())
     <div class="column" style="text-align:center;">
         <ul class="list-inline">

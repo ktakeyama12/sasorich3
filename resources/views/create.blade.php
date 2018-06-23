@@ -1,12 +1,37 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/sasorich.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ secure_asset('css/sasorich.css') }}">
 
-@section('content')
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
     
-    <div class="col-xs-offset-3 col-xs-6"><div class="alert alert-info" role="alert" align="center"> <h1>CREATE A NEW LUNCH INVITATION</h1></div></div>
-       
-       
-            <div class="lead">
-                  <div class="col-xs-offset-3 col-xs-6">
+    <body>
+         @include('commons.error_messages')
+      <div class='box'>
+              <div class='wave -one'></div>
+              <div class='wave -two'></div>
+              <div class='wave -three'></div>
+              
+              <!--ここに題名-->
+              <div class='title'>CREATE A NEW LUNCH INVITATION
+              
+                  <div class="column" style="text-align:center;">
+                      <ul class="list-inline">
+                  </div>
+                </div>
+
+<test> 
+
+<!--中身-->
+
+    <!--<div class="col-xs-offset-3 col-xs-6"><div class="alert alert-info" role="alert" align="center"> <h1>CREATE A NEW LUNCH INVITATION</h1></div></div>-->
+        <div class="lead">
+            <div class="col-xs-offset-3 col-xs-6">
 
                 <div class="form-group"> 
                 {!! Form::model($events, ['route' => 'events.index']) !!}<br>
@@ -70,9 +95,17 @@
                 {!! Form::submit('CREATE EVENT', ['class' => 'btn btn-danger  btn-lg btn-block']) !!}
                 {!! Form::close() !!}
                 </div>
-                
+                <br><br><br><br><br>
         </div>         
-      
+      @include('commons.footer')   
     </div>
-     </div> 
-@endsection
+ 
+<!--中身終わり    -->
+</test>  
+
+
+ </div>
+    
+        
+    </body>
+</html>

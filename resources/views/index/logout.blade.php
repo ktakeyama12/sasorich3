@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<link href="css/sasorich.css" rel="stylesheet" type="text/css">
+<link href="css/logoutsasorich.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 
         

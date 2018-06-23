@@ -19,9 +19,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
   background: #E6FFE9;
-  background: linear-gradient(#E6FFE9, #8EB8FF, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
@@ -29,7 +28,7 @@ body {
 .wave {
   opacity: .4;
   position: absolute;
-  top: -33%;
+  top: 3%;
   left: 45%;
   background: #0af;
   width: 700px;
@@ -55,18 +54,18 @@ body {
   background: yellow;
 }
 
-/*.box:after {*/
-/*  content: '';*/
-/*  display: block;*/
-/*  left: 0;*/
-/*  top: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  background: linear-gradient(to top, #8EB8FF, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));*/
-
-/*  -webkit-transform: translate3d(0, 0, 0);*/
-/*          transform: translate3d(0, 0, 0);*/
-/*}*/
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #8EB8FF, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+  z-index: 11;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
 
 .title {
   position: absolute;
@@ -74,16 +73,16 @@ body {
   top: 0;
   width: 100%;
   z-index: 1;
-  line-height: 100px;
+  line-height: 300px;
   text-align: center;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  color: black;
-  /*text-transform: uppercase;*/
+  color: white;
+  text-transform: uppercase;
   font-family: 'Playfair Display', serif;
-  letter-spacing: .2em;
+  letter-spacing: .4em;
   
-  font-size: 2em;
+  font-size: 4.875em;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   text-indent: .3em;
 }
@@ -124,13 +123,13 @@ body {
 
 
 
-/**,*/
-/**:before,*/
-/**:after {*/
-/*  -webkit-box-sizing: border-box;*/
-/*  -moz-box-sizing: border-box;*/
-/*  box-sizing: border-box;*/
-/*}*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 section {
   font-family: 'Open Sans', sans-serif;
   height: 350px;
@@ -786,10 +785,10 @@ section.p4 a:hover:after {
 test{
     position: absolute;
     left: 0;
-    top: 20%;
-    bottom: 60%;
+    top: 50%;
+  /*bottom: 50%;*/
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
 
 }
 

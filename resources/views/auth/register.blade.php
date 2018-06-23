@@ -1,12 +1,40 @@
-@extends('layouts.app2')
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/sasorich.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ secure_asset('css/sasorich.css') }}">
 
-@section('content')
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+         @include('commons.error_messages')
+      <div class='box'>
+              <div class='wave -one'></div>
+              <div class='wave -two'></div>
+              <div class='wave -three'></div>
+              
+              <!--ここに題名-->
+              <div class='title'>Register
+              
+                  <div class="column" style="text-align:center;">
+                      <ul class="list-inline">
+                  </div>
+                </div>
+
+<test> 
+
+<!--中身-->
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-
+     
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -74,4 +102,18 @@
         </div>
     </div>
 </div>
-@endsection
+                </div>
+                <br><br><br><br><br>
+        </div>         
+      @include('commons.footer')   
+    </div>
+ 
+<!--中身終わり    -->
+</test>  
+
+
+ </div>
+    
+        
+    </body>
+</html>
