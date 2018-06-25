@@ -44,11 +44,20 @@
                 {!! Form::submit('投稿') !!}
                 <br>
                 <input type="hidden" value="{{$quiz->answer}}" name="oldanswer" />
+                <input type="hidden" value="{{$quiz->id}}" name="oldid" />
                 <?php
                     if($message=="正解" or $message==""){
                         print $message;
                     }else{
                         print "答えは" . $message . "でした";
+                    }
+                   
+                    if($gotoulist){
+                         ?><br>誤答一覧：<br><?php
+                        foreach($gotoulist as $gotou){
+                            print $gotou;
+                            ?><br><?php
+                        }
                     }
                 ?>
             @else

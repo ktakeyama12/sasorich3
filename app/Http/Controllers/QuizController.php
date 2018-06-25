@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Quiz;
 use App\User;
 use App\Banana;
+use App\Gotou;
 use DB;
 class QuizController extends Controller
 {
@@ -64,6 +65,7 @@ class QuizController extends Controller
             'quiz' => $quiz,
             'message' => "",
             "quizall" => $quizall,
+              'gotoulist' => "",
         ]);
     }
     
@@ -73,11 +75,14 @@ class QuizController extends Controller
             $message="正解";
         }else{
             $message=$request->oldanswer;
+            $quiz = Gotou::insert(['quizid' => $request->oldid, 'gotou' => $request->answerinput]);
         }
         $quiz = Quiz::inRandomOrder()->first();
+        $gotoulist = Gotou::where('quizid', $request->oldid)->pluck('gotou');
         return view('quiz.answer', [
             'quiz' => $quiz,
             'message' => $message,
+            'gotoulist' => $gotoulist,
         ]);
     }
 }
