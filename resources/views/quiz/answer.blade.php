@@ -48,11 +48,12 @@
                 <?php
                     if($message=="正解" or $message==""){
                         print $message;
+                        $gotoulist = '';
                     }else{
                         print "答えは" . $message . "でした";
                     }
                    
-                    if($gotoulist){
+                    if(!empty($gotoulist)){
                          ?><br>誤答一覧：<br><?php
                         foreach($gotoulist as $gotou){
                             print $gotou;

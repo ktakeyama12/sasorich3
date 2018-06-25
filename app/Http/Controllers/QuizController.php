@@ -79,6 +79,7 @@ class QuizController extends Controller
         }
         $quiz = Quiz::inRandomOrder()->first();
         $gotoulist = Gotou::where('quizid', $request->oldid)->pluck('gotou');
+    
         return view('quiz.answer', [
             'quiz' => $quiz,
             'message' => $message,
