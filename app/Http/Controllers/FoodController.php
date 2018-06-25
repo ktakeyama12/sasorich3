@@ -58,7 +58,15 @@ class FoodController extends Controller
     
     public function match(){
         $user_id = \Auth::user()->id;
-        $foodeat = \App\Food::where('user_id', $user_id)->pluck('foodseaten');
+        $foodeat = Food::where('user_id', $user_id)->pluck('foodseaten');
+        $names = Food::groupBy('user_id')->pluck('user_id');
+        
+        $a = Food::where('foodseaten', $foodeat)->pluck('foodseaten');
+        
+
+        var_dump($a);exit;
+        
+        
         $arrayeat=[];
         $arraynames=[];
         

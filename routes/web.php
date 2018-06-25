@@ -43,3 +43,12 @@ Route::post('events/{id}', 'MemberController@sanka')->name('member.sanka');
 Route::get('food', 'FoodController@index')->name('food.index');
 Route::post('food.store', 'FoodController@store')->name('food.store');
 Route::get('food.match', 'FoodController@match')->name('food.match');
+
+Route::get('bananas', 'BananasController@create')->name('bananas.create');
+Route::post('/banana', 'BananasController@store')->name('bananas.store');
+Route::get('bananas.shokika', 'BananasController@shokika')->name('bananas.shokika');
+
+Route::get('quiz.sakusei', 'QuizController@sakusei')->name('quiz.sakusei');
+Route::get('quiz.answer', 'QuizController@answer')->name('quiz.answer');
+Route::post('quiz.store', 'QuizController@store')->name('quiz.store');
+Route::post('quiz.answerinput', 'QuizController@answerinput')->name('quiz.answerinput');

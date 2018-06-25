@@ -15,6 +15,22 @@
              <li>
                 <h1>&nbsp;&nbsp;<a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></h1>&nbsp;</span></a>
             </li>
+            <br>
+            <li>
+                 <button type="button" class="btn btn-info">
+                     {!! link_to_route('bananas.create', 'マジカルバナナしない？') !!}
+                     </button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-info">
+                 {!! link_to_route('quiz.sakusei', 'クイズを投稿') !!}
+                 </button>
+            </li>
+            <li>
+                 <button type="button" class="btn btn-info">
+                     {!! link_to_route('quiz.answer', 'クイズに答える') !!}
+                     </button>
+            </li>
         </ul>
     </div>
     @else

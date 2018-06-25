@@ -49,7 +49,7 @@
             </div>
         <br>
         @endforeach
-    <br><br><br><br>
+    <br><br><br><br><br><br>
     </div>
  
 <!--中身終わり    -->
