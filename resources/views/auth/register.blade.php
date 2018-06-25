@@ -11,7 +11,7 @@
     </head>
     
     <body>
-         @include('commons.error_messages')
+     
       <div class='box'>
               <div class='wave -one'></div>
               <div class='wave -two'></div>
@@ -26,7 +26,7 @@
                 </div>
 
 <test> 
-
+ @include('commons.error_messages')
 <!--中身-->
 
 

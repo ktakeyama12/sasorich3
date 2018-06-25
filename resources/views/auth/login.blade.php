@@ -11,12 +11,12 @@
     </head>
     
     <body>
-         @include('commons.error_messages')
+         
       <div class='box'>
               <div class='wave -one'></div>
               <div class='wave -two'></div>
               <div class='wave -three'></div>
-              
+             
               <!--ここに題名-->
               <div class='title'>Login
               
@@ -35,7 +35,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <!--<div class="panel-heading">Login</div>-->
-
+ @include('commons.error_messages')
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
